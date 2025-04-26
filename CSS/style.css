@@ -13,15 +13,9 @@ body {
     color: #333;
 }
 
-.content {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-    margin-bottom: 70px; 
-}
 
 /* Menu Inferior - Estilo Mobile */
-.menu_inferior {
+.menu {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -42,13 +36,11 @@ body {
     color: #ffff00;
     text-decoration: none;
     font-size: 0.65rem;
-    transition: all 0.2s ease;
-    cursor: pointer;
     flex: 1;
     min-width: 0;
 }
 
-.acesso i {
+.acesso x {
     font-size: 1.4rem;
     margin-bottom: 4px;
 }
@@ -59,7 +51,7 @@ body {
 
 /* Estilo para Desktop */
 @media (min-width: 768px) {
-    .menu_inferior {
+    .menu {
         position: sticky;
         bottom: auto;
         top: 0;
@@ -83,6 +75,8 @@ body {
 
     
 }
+
+
 
 
 
