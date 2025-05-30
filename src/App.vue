@@ -9,7 +9,7 @@
 
 <script setup>
   import { ref } from 'vue';
-  import { useRouter } from 'vue-router'
+  import { useRouter } from 'vue-router';
 
   const router = useRouter()
 
@@ -24,7 +24,7 @@
     },
 
     {
-      name: 'Status',
+      name: 'status',
       path: 'status',
       icon: 'bi bi-train-front',
       selectedIcon: 'bi bi-train-front-fill'
