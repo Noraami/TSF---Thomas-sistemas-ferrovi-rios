@@ -2,7 +2,8 @@
   <v-app>
     <router-view />
     <v-bottom-navigation grow class="d-flex">
-      <v-btn v-for="page in pages" :key="page.name" class="bi text-h5" :class="selectedPage === page.name ? `bi${page.selectedIcon}` : `bi${page.icon}`" @click="alterPage(page.path)" />
+      <v-btn v-for="page in pages" :key="page.name" class="bi text-h5" :class="selectedPage === page.name ? `bi${page.selectedIcon}` : `bi${page.icon}`" @click="alterPage(page.path, page.name
+      )" />
     </v-bottom-navigation>
   </v-app>
 </template>
@@ -59,7 +60,9 @@
     },
   ])
 
-  const alterPage = (page) => {
+  const alterPage = (page, name) => {
     router.push({ name: page })
+    selectedPage.value = name
+    console.log(name, selectedPage)
   }
 </script>
