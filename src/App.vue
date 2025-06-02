@@ -1,10 +1,10 @@
 <template>
   <v-app>
-    <router-view />
-    <v-bottom-navigation grow class="d-flex">
-      <v-btn v-for="page in pages" :key="page.name" class="bi text-h5" :class="selectedPage === page.name ? `bi${page.selectedIcon}` : `bi${page.icon}`" @click="alterPage(page.path, page.name
-      )" />
+    <v-bottom-navigation class="d-flex align-center ga-10 bg-red-darken-4 h-auto py-3" :class="$vuetify.display.mobile ? 'ga-3' : 'ga-8'" location="bottom" >
+      <v-btn v-for="page in pages" :key="page.name" class="bi text-h5 bg-blue text-amber-accent-3" :class="selectedPage === page.name ? `bi${page.selectedIcon}` : `bi${page.icon}`"
+      @click="alterPage(page.path, page.name)" />
     </v-bottom-navigation>
+    <router-view />
   </v-app>
 </template>
 
@@ -40,21 +40,21 @@
 
     {
       name: 'Manutenção',
-      path: 'manutention',
+      path: 'maintenance',
       icon: 'bi bi-gear',
       selectedIcon: 'bi bi-gear-fill'
     },
 
     {
       name: 'Relatórios',
-      path: 'relatory',
+      path: 'reports',
       icon: 'bi bi-file-text',
       selectedIcon: 'bi bi-file-text-fill'
     },
 
     {
       name: 'Alertas',
-      path: 'alerts',
+      path: 'warnings',
       icon: 'bi bi-bell',
       selectedIcon: 'bi bi-bell-fill'
     },

@@ -13,6 +13,26 @@ const router = createRouter({
       name: 'status',
       component: () => import('../pages/status.vue')
     },
+    {
+      path: '/lines',
+      name: 'lines',
+      component: () => import('../pages/lines.vue')
+    },
+    {
+      path: '/maintenance',
+      name: 'maintenance',
+      component: () => import('../pages/maintenance.vue')
+    },
+    {
+      path: '/reports',
+      name: 'reports',
+      component: () => import('../pages/reports.vue')
+    },
+    {
+      path: '/warnings',
+      name: 'warnings',
+      component: () => import('../pages/warnings.vue')
+    },
   ],
 })
 
